@@ -35,3 +35,5 @@ function sortByType(nums) {
 
 nums = [0, 2, 1, 2, 0, 1, 1]
 console.log(sortByType(nums));
+
+// output: [0, 0, 1, 1, 1, 2, 2]
