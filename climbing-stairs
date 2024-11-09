@@ -1,0 +1,11 @@
+/* Question: Given n stairs, you can climb 1 or 2 steps at a time. Write a function that returns the number of distinct ways to reach the top.
+Example: For n = 4, the function should return 5 (ways are [1+1+1+1, 1+1+2, 1+2+1, 2+1+1, 2+2]). */
+
+function countWays(n) {
+    let noOfWays = [1,1,2];
+    for (let i = 3; i<=n; i++){
+        noOfWays[i] = noOfWays[i-1] + noOfWays[i-2];
+    }
+    return noOfWays[n];
+};
+console.log(countWays(7));
