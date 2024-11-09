@@ -1,0 +1,16 @@
+/* Question: Write a function that takes a string as input and returns true if it’s a palindrome, and false otherwise.
+Example: Given s = "racecar", the function should return true. For s = "hello", it should return false. */
+
+function isPalindrome(s) {
+    let backwards = '';
+
+    for (let i = s.length-1; i>=0; i--){
+        backwards += s[i];
+    }   if (backwards === s){
+            return true;
+        } else {
+            return false;
+        }
+ };
+
+ console.log(isPalindrome("racecar"));
