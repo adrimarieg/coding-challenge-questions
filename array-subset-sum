@@ -1,0 +1,14 @@
+/* Question: Given an array of integers nums and a target integer sum, determine if there is a contiguous subarray that sums to sum.
+Example: For nums = [1, 2, 3, 7, 5] and sum = 12, the function should return true because [2, 3, 7] sums to 12. For sum = 20, it should return false. */
+
+function maxSubarraySum(nums) {
+    let subSum = nums[0];
+    let maxSum = nums[0];
+
+    for (let i = 1; i < nums.length; i++) {
+        subSum = Math.max(nums[i], subSum + nums[i]);
+        maxSum = Math.max(maxSum, subSum);
+    }
+    return maxSum;
+};
+console.log(maxSubarraySum([1, -2, 3, 4, -1, 2, 1, -5, 4]));
