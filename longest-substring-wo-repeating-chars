@@ -14,7 +14,7 @@ function longestSubstring(str) {
         let workingStr = 0;
         let chars = new Set();
 
-        for (let j = 0; j<str.length; j++){
+        for (let j = i; j<str.length; j++){
             if (!chars.has(str[j])) {
                 chars.add(str[j]);
                 workingStr += 1;
