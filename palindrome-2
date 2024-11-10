@@ -1,0 +1,21 @@
+/* Palindrome Check with Non-Alphanumeric Characters
+
+Description: Create a function that checks if a given string is a 
+palindrome, ignoring cases, spaces, and any non-alphanumeric characters.
+Example: For the input s = "A man, a plan, a canal: Panama", the output 
+should be true since it reads the same backward when non-alphanumeric 
+characters are ignored.
+*/
+
+function isPalindrome(str){
+    let cleanedStr = str.replace(/[^a-zA-Z0-9]/g,'').toLowerCase();
+    let backwards = '';
+
+    for (let i = cleanedStr.length-1; i>=0; i--) {
+        backwards+= cleanedStr[i];
+    } 
+
+    return cleanedStr === backwards;
+};
+
+console.log(isPalindrome("A man, a plan, a canal: Panama"))
