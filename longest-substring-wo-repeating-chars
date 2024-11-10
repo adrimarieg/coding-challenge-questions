@@ -1,0 +1,28 @@
+/* Longest Substring Without Repeating Characters
+
+Description: Write a function that takes a string as input and returns 
+the length of the longest substring without repeating characters.
+
+Example: For the input s = "abcabcbb", the output should be 3 (the 
+substring is "abc").
+*/
+
+function longestSubstring(str) {
+    let longestStr = 0;
+
+    for (let i = 0; i<str.length; i++) {
+        let workingStr = 0;
+        let chars = new Set();
+
+        for (let j = 0; j<str.length; j++){
+            if (!chars.has(str[j])) {
+                chars.add(str[j]);
+                workingStr += 1;
+            } else {
+                break;
+            }
+            } longestStr = Math.max(longestStr, workingStr);
+        } return longestStr;
+    };
+
+console.log(longestSubstring("ganjaman"));
